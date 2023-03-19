@@ -1,3 +1,93 @@
 body {
-    background-color: grey;
+    background-color: #1d1d1d;
+}
+
+.formForUsernameAndAge {
+    margin: 20px auto;
+    background-color: white;
+    width:50%;
+    border-radius: 20px;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.formForUsernameAndAge label {
+    display: block;
+    font-weight: bold;
+}
+
+.formForUsernameAndAge input {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.formForUsernameAndAge input[type='submit'] {
+    color: #ffffff;
+    background-color: #490c55;
+    font-weight: bold;
+    width: 100px;
+    padding: 8px;
+}
+
+.forumResults {
+    margin: 10px auto;
+    width:50%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    color:black;
+}
+
+.forumResults p {
+    border: 1px solid black;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+div.Errors {
+    width:100%;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+    color:red;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+div.Errors h2 {
+    background-color: #490c55;
+    border-radius: 20px 20px 0 0;
+    padding: 10px;
+    color: white;
+}
+
+div.Errors .main {
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 20px;
+    width:50%;
+}
+
+div.Errors .main p {
+    padding-left: 30px;
+    margin-bottom:10px;
+    color:blue;
+}
+
+div.Errors .main button {
+    background-color: #490c55;
+    font-weight: bold;
+    padding: 10px 30px;
+    color:white;
+    margin: 10px;
+}
+
+div.Errors .hidden {
+    display:none;
 }

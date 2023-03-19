@@ -3,15 +3,17 @@ import './App.css';
 import ForumInput from "./Components/ForumInput";
 import ForumResults from "./Components/ForumResults";
 import {useState} from "react";
+import ErrorHandler from "./Components/ErrorHandler";
 
 
 function App() {
     const [records, setRecords] = useState([]);
+    const [errors, setErrors] = useState([]);
 
     return (
         <>
-            <h1>Test</h1>
-            <ForumInput record={setRecords}/>
+            <ErrorHandler errors={errors} setErrors={setErrors} />
+            <ForumInput record={setRecords} setErrors={setErrors} />
             <ForumResults results={records}/>
         </>
     );

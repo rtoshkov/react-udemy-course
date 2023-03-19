@@ -7,14 +7,19 @@ const ForumInput = (props) => {
     const sanitizeValues = () => {
         let errors = [];
         if (username.length < 3) {
-            errors.push('Username should be at least 3 characters');
+            errors.push(
+                {
+                    message: 'Username should be at least 3 characters',
+                    id: 1
+                }
+            );
         }
         if (
             !Number.isInteger(Number(age))
             || age < 1
             || age > 100
         ) {
-            errors.push('Please select a valid age')
+            errors.push({message: 'Please select a valid age', id: 2})
         }
         return errors;
     }
@@ -24,8 +29,10 @@ const ForumInput = (props) => {
 
         let errors = sanitizeValues();
         if (errors.length > 0) {
-            alert(errors.join('\n'));
+            props.setErrors(errors);
             return;
+        } else {
+            props.setErrors([]);
         }
 
 
@@ -61,7 +68,7 @@ const ForumInput = (props) => {
                 <input type="number" id={age} value={age} onChange={ageHandler}/>
             </div>
 
-            <input type="submit" value="Subnmit Me"/>
+            <input type="submit" value="Add User"/>
         </form>
     )
 }
